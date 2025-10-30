@@ -1,9 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Rest Countries</title>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <h1>🌏 World Explorer</h1>
+      <button id="theme-toggle" class="input">🌙 Dark Mode</button>
+    </nav>
+
+    <div class="filters">
+      <label class="visually-hidden" for="search">Search for a country</label>
+      <input
+        id="search"
+        type="search"
+        class="filter-input input"
+        placeholder="Search for a country..."
+      />
+
+      <label for="region-selector" class="visually-hidden">Select region</label>
+      <select id="region-selector" class="filter-input input">
+        <option value="all" selected>All Region</option>
+        <option value="asia">Asia</option>
+        <option value="europe">Europe</option>
+        <option value="america">America</option>
+        <option value="africa">Africa</option>
+        <option value="oceania">Oceania</option>
+      </select>
+    </div>
+
+    <section class="countries">
+      <div class="grid" id="countries-grid">
+        <div class="card">
+          <img
+            src="https://flagcdn.com/cl.svg"
+            alt="Flag of Afghanistan"
+            class="card-flag"
+          />
+          <div class="card-body">
+            <h2 class="card-title">Afghanistan</h2>
+            <p><strong>Population:</strong> 27657145</p>
+            <p><strong>Region:</strong> Asia</p>
+            <p><strong>Capital:</strong> Kabul</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
