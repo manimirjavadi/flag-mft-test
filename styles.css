@@ -1,0 +1,122 @@
+:root {
+  --bg: #f6f7fb;
+  --layer: #ffffff;
+  --text: #16161a;
+  --muted: #6b7280;
+  --ring-color: rgba(59, 130, 246, 0.25);
+  --ring: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.06);
+  --radius: 14px;
+
+  --gap: 1rem;
+  --container: 1200px;
+}
+
+html[data-theme="dark"] {
+  --bg: #0c0f14;
+  --layer: #121824;
+  --text: #e5e7eb;
+  --muted: #9aa4b2;
+  --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+html {
+  background-color: var(--bg);
+}
+
+body {
+  max-width: 1448px;
+  margin: auto;
+  color: var(--text);
+  padding: 1.25rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+.filters {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input {
+  background: var(--layer);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--radius);
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+}
+
+.filter-input {
+  font-size: 0.7rem;
+  width: 260px;
+  padding: 0.9rem 1rem;
+}
+
+.search-input:focus {
+  outline: 2px solid var(--ring-color);
+}
+
+.countries {
+  margin-top: 1rem;
+}
+
+.card {
+  box-shadow: var(--card-shadow);
+  transition: all ease-in-out 0.1s;
+  background-color: var(--layer);
+  width: 300px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-flag {
+  height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .filters {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
